@@ -34,10 +34,9 @@ class SubmissionDatabase(object):
 
     def __init__(self, name):
         self.name = name
-    # Creates a record of a transaction
-    def logTransaction(self, username, email, image_url, description, location, tags):
-        submission = SubmissionRecord( username, email, image_url, description, location, tags)
-        self.submissions.append(transaction)
+    # Adds a record of a submission
+    def logS(self, submission):
+        self.submissions.append(submission)
 
     def __str__(self):
         msg = "%s Database" % (self.name)

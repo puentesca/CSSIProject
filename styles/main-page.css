@@ -1,9 +1,15 @@
+#main-header{
+  text-align: center;
+  font-size: 45px;
+}
+
+#missionHeader{
+  text-align: center;
+  
+}
 
 
-
-
-
-#Tag_Info_Header {
+/* #Tag_Info_Header {
   background-color: ;
   color: ;
   padding: ;
@@ -19,8 +25,8 @@
 
 
 /* Style all elements with the class name "city" */
-.definition {
+/* .definition {
   background-color: ;
   color: ;
   padding: ;
-}
+} */

@@ -18,6 +18,42 @@ class HomePage(webapp2.RequestHandler):
     def post(self):
         pass
 
+# the handler section
+class TagInfoPage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('/templates/tag-info.html')
+        self.response.write(welcome_template.render())
+    def post(self):
+        pass
+
+# the handler section
+class DepartmentInfoPage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('/templates/department-info.html')
+        self.response.write(welcome_template.render())
+    def post(self):
+        pass
+
+# the handler section
+class FormPage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('/templates/form-page.html')
+        self.response.write(welcome_template.render())
+    def post(self):
+        pass
+
+# the handler section
+class SubmissionConfirmedPage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('/templates/submission-confirmed-page.html')
+        self.response.write(welcome_template.render())
+    def post(self):
+        pass
+
+
+
+
+
 # the app configuration section
 app = webapp2.WSGIApplication([
     ('/', HomePage),

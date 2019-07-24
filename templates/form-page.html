@@ -21,6 +21,12 @@
       </select><br>
       Location:<br>
       <input type = "textbox" name = "location"><br>
+      Location Suggestions: <br>
+      <select name = "location suggestions">
+      {% for add in addr %}
+        <option value = "{{add}}">{{add}}</option>
+      {% endfor %}
+      <p>{{addr}}</p>
       Tags:<br>
       <select name = "tags">
         <option value = "tag0">tag0</option>

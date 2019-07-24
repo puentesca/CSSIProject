@@ -76,10 +76,13 @@ class FormPage(webapp2.RequestHandler):
         report_location = self.request.get("location suggestions")
         report_tags = self.request.get("tags")
         report_urgency = self.request.get("urgency-level")
+        #Creates a local record that is printable
         report_record = LocalSubmissionRecord(name = report_name, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
+        #Converts the recrod to a database-readable version
         cloud_record = report_record.ConvertToCloudReadable()
         #print(cloud_record)
         print(cloud_record.put())
+        #Submits the record to the email
         emailer = SubmissionHandler()
         emailer.sendSubmission(report_record)
 

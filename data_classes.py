@@ -1,11 +1,13 @@
 #SubmissionRecord, SubmissionDatabase, UserAccount
 import time
 import datetime
+from google.appengine.ext import ndb, users
 
 
 # Stores data representing a submission (report)
-class SubmissionRecord(object):
+class LocalSubmissionRecord(object):
     def __init__(self, username, email, image_url, description, location, tags, urgency):
+
         self.time_submitted = time.time()
         self.username = username
         self.email = email
@@ -14,6 +16,10 @@ class SubmissionRecord(object):
         self.location = location
         self.tags = tags
         self.urgency = urgency
+
+    def ConvertToCloudReadable(self):
+        cloudRecord = CloudSubmissionRecord(time_submitted = self.time_submitted, username = self.username, email = self.email, image_url = self.image_url, description = self.description, location = self.location, tags = self.tags, urgency = self.urgency)
+        return cloudRecord
 
     def __str__(self):
         msg = ""
@@ -24,11 +30,20 @@ class SubmissionRecord(object):
         msg += "Tags: %s\n" % (self.tags)
         return msg
 
-
+class CloudSubmissionRecord(ndb.Model):
+    time_submitted = ndb.FloatProperty(required = True)
+    username = ndb.StringProperty(required = True)
+    email = ndb.StringProperty(required = True)
+    image_url = ndb.StringProperty(required = False)
+    description = ndb.StringProperty(required = False)
+    location = ndb.StringProperty(required = True)
+    tags = ndb.StringProperty(required = True)
+    urgency = ndb.StringProperty(required = True)
+            #CONVERT TO DATASTORE
 
 
 #Holds submission records
-class SubmissionDatabase(object):
+class SubmissionDatabase(ndb.Model):
 
     submissions = []
 
@@ -45,4 +60,7 @@ class SubmissionDatabase(object):
             msg += str(t) + "----------------------------------------------------------\n"
         return msg
 
-#class UserAccount(object):
+class UserAccount(ndb.Model):
+    username = ndb.StringProperty(required = True)
+    email = ndb.StringProperty(required = True)
+    report_database = ndb.StringProperty(required = True)

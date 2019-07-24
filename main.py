@@ -2,11 +2,8 @@ import webapp2
 import jinja2
 import os
 from google.appengine.ext import ndb
-#<<<<<<< HEAD
 # from data_classes import SubmissionRecord, SubmissionDatabase, UserAccount
-#=======
-from data_classes import SubmissionRecord, SubmissionDatabase#, UserAccount
-#>>>>>>> d722c6acc510735983a75e4b627e0a4f2d6297c1
+from data_classes import LocalSubmissionRecord, CloudSubmissionRecord, SubmissionDatabase#, UserAccount
 
 the_jinja_env = jinja2.Environment(
     loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -53,8 +50,11 @@ class FormPage(webapp2.RequestHandler):
         report_location = self.request.get("location")
         report_tags = self.request.get("tags")
         report_urgency = self.request.get("urgency-level")
-        record = SubmissionRecord(username = report_username, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
-        print(record)
+        report_record = LocalSubmissionRecord(username = report_username, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
+        cloud_record = report_record.ConvertToCloudReadable()
+        print(cloud_record)
+        cloud_record.put()
+        print(cloud_record.getKey())
 
 # the handler section
 class SubmissionConfirmedPage(webapp2.RequestHandler):

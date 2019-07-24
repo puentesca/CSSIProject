@@ -3,15 +3,10 @@ import jinja2
 import os
 import json
 from google.appengine.ext import ndb
-<<<<<<< HEAD
 from google.appengine.api import urlfetch
-from data_classes import SubmissionRecord, SubmissionDatabase#, UserAccount
+from data_classes import LocalSubmissionRecord,  CloudSubmissionRecord, SubmissionHandler#, UserAccount
 api2key="AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo"
-=======
-# from data_classes import SubmissionRecord, SubmissionDatabase, UserAccount
-from data_classes import LocalSubmissionRecord, CloudSubmissionRecord, SubmissionHandler#, UserAccount
 
->>>>>>> 7237331d0afe42112af4b8450bd4a2b5e2520995
 the_jinja_env = jinja2.Environment(
     loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions = ['jinja2.ext.autoescape'],

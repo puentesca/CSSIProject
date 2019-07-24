@@ -2,11 +2,11 @@ import webapp2
 import jinja2
 import os
 from google.appengine.ext import ndb
-<<<<<<< HEAD
+#<<<<<<< HEAD
 # from data_classes import SubmissionRecord, SubmissionDatabase, UserAccount
-=======
+#=======
 from data_classes import SubmissionRecord, SubmissionDatabase#, UserAccount
->>>>>>> d722c6acc510735983a75e4b627e0a4f2d6297c1
+#>>>>>>> d722c6acc510735983a75e4b627e0a4f2d6297c1
 
 the_jinja_env = jinja2.Environment(
     loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),

@@ -8,41 +8,42 @@
   </head>
   <body>
     <div id = "header_bar">
-      Hello
+      <h1 class = "text" id = "header_text">REPORT</h1>
     </div>
-
-    <form method = "post">
-      Your Name:<br>
-      <input type = "textbox" name = "name"><br>
-      Your Email:<br>
-      <input type = "textbox" name = "email"><br>
-      Image Url:<br>
-      <input type = "textbox" name = "image-url"> <br>
-      Desciption:<br>
-      <input type = "textbox" name = "description"><br>
-      Urgency Level:<br>
-      <select multiple name = "urgency-level">
-        <option value = "Low">Low</option>
-        <option value = "Medium">Medium</option>
-        <option value = "High">High</option>
-        <option value = "Urgent">Urgent</option>
-      </select><br>
-      Location:<br>
-      <input type = "textbox" name = "location"><br>
-      Location Suggestions: <br>
-      <select name = "location suggestions">
-      {% for add in addr %}
-        <option value = "{{add}}">{{add}}</option>
-      {% endfor %}
-      <p>{{addr}}</p>
-      Tags:<br>
-      <select name = "tags">
-        <option value = "tag0">tag0</option>
-        <option value = "tag1">tag1</option>
-        <option value = "tag2">tag2</option>
-        <option value = "tag3">tag3</option>
-      </select><br>
-      <input type = "submit">
-    </form>
+    <div id = "body_background">
+      <form method = "post">
+        Your Name:<br>
+        <input type = "textbox" name = "name"><br>
+        Your Email:<br>
+        <input type = "textbox" name = "email"><br>
+        Image Url:<br>
+        <input type = "textbox" name = "image-url"> <br>
+        Desciption:<br>
+        <input type = "textbox" name = "description"><br>
+        Urgency Level:<br>
+        <select multiple name = "urgency-level">
+          <option value = "Low">Low</option>
+          <option value = "Medium">Medium</option>
+          <option value = "High">High</option>
+          <option value = "Urgent">Urgent</option>
+        </select><br>
+        Location:<br>
+        <input type = "textbox" name = "location"><br>
+        Location Suggestions: <br>
+        <select name = "location suggestions">
+        {% for add in addr %}
+          <option value = "{{add}}">{{add}}</option>
+        {% endfor %}
+        <p>{{addr}}</p>
+        Tags:<br>
+        <select name = "tags">
+          <option value = "tag0">tag0</option>
+          <option value = "tag1">tag1</option>
+          <option value = "tag2">tag2</option>
+          <option value = "tag3">tag3</option>
+        </select><br>
+        <input type = "submit">
+      </form>
+    </div>
   </body>
 </html>

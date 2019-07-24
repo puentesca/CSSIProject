@@ -1,1 +1,60 @@
+body{
+  background-color: #565c58;
+}
 
+.clouds{
+  background-image: url("http://images.unsplash.com/photo-1528055823578-1c18ae59ef8c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+#main-header{
+  color: #ebba34;
+  text-align: center;
+  font-size: 45px;
+}
+
+#missionHeader{
+  font-size: 28px;
+  color: #237820;
+  text-align: center;
+}
+
+#mission-statement{
+  font-size: 24px;
+  color: #cf5e32;
+  background-color: rgba(0,0,0,0);
+  text-align: center;
+  margin: 0 100px;
+  line-height: 1.5em;
+}
+
+#council-definition-button:hover{
+  box-shadow: 5px 5px 2.5px black;
+}
+
+#council-definition-button{
+  border: 2px #4d83db;
+  background-color: #4d83db;
+  font-size: 30px;
+}
+
+#tag-definition-button:hover{
+  box-shadow: 5px 5px 2.5px black;
+}
+
+#tag-definition-button{
+  border: 2px #4d83db;
+  background-color: #4d83db;
+  font-size: 30px;
+}
+
+#report-button{
+  border: 2px #e34f44;
+  background-color: #e34f44;
+  font-size: 40px;
+}

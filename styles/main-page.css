@@ -1,5 +1,5 @@
 body{
-  background-color: #565c58;
+  background-color: #b3b3b3;
 }
 
 .clouds{
@@ -12,18 +12,22 @@ body{
   padding-top: 15px;
 }
 
+/* TITLE AT VERY TOP */
 #main-header{
-  color: #ebba34;
+  color: #a5ffa1;
+  /* color: #ebba34; */
   text-align: center;
   font-size: 45px;
 }
 
+/* HEADER ABOVE PARAGRAPH */
 #missionHeader{
   font-size: 28px;
-  color: #237820;
+  color: #dbac2a;
   text-align: center;
 }
 
+/* PARAGRAPH */
 #mission-statement{
   font-size: 24px;
   color: #cf5e32;
@@ -33,28 +37,54 @@ body{
   line-height: 1.5em;
 }
 
-#council-definition-button:hover{
-  box-shadow: 5px 5px 2.5px black;
-}
-
-#council-definition-button{
-  border: 2px #4d83db;
-  background-color: #4d83db;
-  font-size: 30px;
-}
-
+/* TAG BUTTON */
 #tag-definition-button:hover{
-  box-shadow: 5px 5px 2.5px black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #tag-definition-button{
   border: 2px #4d83db;
   background-color: #4d83db;
-  font-size: 30px;
+  font-size: 35px;
+  border-radius: 7.5px;
+  position: relative;
+  left: 395px;
+}
+
+/* COUNCIL BUTTON */
+#council-definition-button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#council-definition-button{
+  border: 2px #4d83db;
+  background-color: #4d83db;
+  font-size: 35px;
+  border-radius: 7.5px;
+  position: relative;
+  left: 695px;
+}
+
+/* REPORT BUTTON */
+/* #whitespace-between-definitionsAndreport{
+  min-height: 150px;
+  display: block;
+} */
+
+#report-button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #report-button{
   border: 2px #e34f44;
   background-color: #e34f44;
-  font-size: 40px;
+  font-size: 45px;
+  position: relative;
+  left: 575px;
+}
+
+/* Whitespace at the bottom */
+#bottom-of-page-whitespace{
+  min-height: 350px;
+  display: block;
 }

@@ -3,7 +3,7 @@ import jinja2
 import os
 from google.appengine.ext import ndb
 # from data_classes import SubmissionRecord, SubmissionDatabase, UserAccount
-from data_classes import LocalSubmissionRecord, CloudSubmissionRecord, SubmissionDatabase#, UserAccount
+from data_classes import LocalSubmissionRecord, CloudSubmissionRecord, SubmissionHandler#, UserAccount
 
 the_jinja_env = jinja2.Environment(
     loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -43,18 +43,20 @@ class FormPage(webapp2.RequestHandler):
         welcome_template = the_jinja_env.get_template('/templates/form-page.html')
         self.response.write(welcome_template.render())
     def post(self):
-        report_username = "test username" #self.request.get("username")
-        report_email = "test email" #self.request.get("email")
+        report_name =  self.request.get("name")
+        report_email = self.request.get("email")
         report_image_url = self.request.get("image-url")
         report_description = self.request.get("description")
         report_location = self.request.get("location")
         report_tags = self.request.get("tags")
         report_urgency = self.request.get("urgency-level")
-        report_record = LocalSubmissionRecord(username = report_username, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
+        report_record = LocalSubmissionRecord(name = report_name, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
         cloud_record = report_record.ConvertToCloudReadable()
-        print(cloud_record)
-        cloud_record.put()
-        print(cloud_record.getKey())
+        #print(cloud_record)
+        print(cloud_record.put())
+        emailer = SubmissionHandler()
+        emailer.sendSubmission(report_record)
+
 
 # the handler section
 class SubmissionConfirmedPage(webapp2.RequestHandler):

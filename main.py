@@ -1,9 +1,11 @@
 import webapp2
 import jinja2
 import os
+import json
 from google.appengine.ext import ndb
-# from data_classes import SubmissionRecord, SubmissionDatabase, UserAccount
-from data_classes import LocalSubmissionRecord, CloudSubmissionRecord, SubmissionHandler#, UserAccount
+from google.appengine.api import urlfetch
+from data_classes import LocalSubmissionRecord,  CloudSubmissionRecord, SubmissionHandler#, UserAccount
+api2key="AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo"
 
 the_jinja_env = jinja2.Environment(
     loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -41,19 +43,46 @@ class DepartmentInfoPage(webapp2.RequestHandler):
 class FormPage(webapp2.RequestHandler):
     def get(self):
         welcome_template = the_jinja_env.get_template('/templates/form-page.html')
-        self.response.write(welcome_template.render())
+
+        url = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + api2key
+        api_location = urlfetch.fetch( url, method="POST")
+        json_data = json.loads(api_location.content)
+        lat = json_data["location"]["lat"]
+        lng = json_data["location"]["lng"]
+        url2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+str(lat)+","+str(lng)+"&key=" + api2key
+        api_location = urlfetch.fetch(url2, method="POST")
+        json_data = json.loads(api_location.content)
+        location_addresses = json_data["results"]
+        formatted_addresses = []
+        for address in location_addresses:
+            formatted_addresses.append(address["formatted_address"])
+        print("formatted_addresses")
+        # location_suggestions = json_data[results][0, 15]["formatted_address"]
+        template_values =  {
+        "addr": formatted_addresses,
+        # "suggestions": location_suggestions
+        }
+
+
+        self.response.write(welcome_template.render(template_values))
     def post(self):
         report_name =  self.request.get("name")
         report_email = self.request.get("email")
+
+
         report_image_url = self.request.get("image-url")
         report_description = self.request.get("description")
         report_location = self.request.get("location")
+        report_location = self.request.get("location suggestions")
         report_tags = self.request.get("tags")
         report_urgency = self.request.get("urgency-level")
+        #Creates a local record that is printable
         report_record = LocalSubmissionRecord(name = report_name, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
+        #Converts the recrod to a database-readable version
         cloud_record = report_record.ConvertToCloudReadable()
         #print(cloud_record)
         print(cloud_record.put())
+        #Submits the record to the email
         emailer = SubmissionHandler()
         emailer.sendSubmission(report_record)
 

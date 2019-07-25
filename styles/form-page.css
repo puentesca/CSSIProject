@@ -40,7 +40,7 @@
 }
 
 #form_background_header_image{
-  background-color: #e32929;
+  background-color: tomato;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,7 @@ body {
 
 .textbox_header
 {
-  color: #850000;
+  color: #404040;
   margin: 0px;
   padding-top: 60px;
   padding-bottom: 12px;

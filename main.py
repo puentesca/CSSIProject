@@ -90,6 +90,8 @@ class FormPage(webapp2.RequestHandler):
         #Submits the record to the email
         emailer = SubmissionHandler()
         emailer.sendSubmission(report_record)
+        welcome_template = the_jinja_env.get_template('/templates/submission-confirmed-page.html')
+        self.response.write(welcome_template.render())
 
 
 # the handler section

@@ -1,5 +1,5 @@
 #header_bar{
-  min-height: 200px;
+  min-height: 170px;
   background-color: #d1d1d1;
   display: flex;
   align-items: center;
@@ -7,23 +7,117 @@
 }
 
 #header_text{
+  color: #c9c9c9;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 60px;
+
 }
 
 .text{
-
+  font-family: 'Antic', sans-serif;
 }
+
 #body_background{
-  min-height: 2000px;
-  background-color: #9e9e9e;
+  min-height: 2100px;
+  background-color: #ededed;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+#form_background{
 
+  background-color: #c9c9c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 25px;
+  min-height: 120%;
+  min-width: 80%;
+}
+
+#form_background_header_image{
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 25px 25px 0px 0px;
+  min-height: 150px;
+  min-width: 100%;
+}
+
+#form_background_footer_image{
+  background-color: #787878;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0px 0px 25px 25px;
+  min-height: 150px;
+  min-width: 100%;
+}
 
 body {
   margin: 0;
+}
+
+/*Form headers  */
+
+.textbox_header
+{
+  color: #404040;
+  margin: 0px;
+  padding-top: 60px;
+  padding-bottom: 12px;
+  font-size: 30px;
+}
+
+
+/* Textboxes  */
+.textbox_holder{
+  background-color: #fafcff;
+  border: 0px;
+  padding: 0px;
+  border-radius: 25px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.textbox{
+  background-color: #fafcff;
+  width: 92%;
+  min-height: 90%;
+
+  border: 0px;
+  padding: 0px;
+  outline-style: none;
+  font-size: 180%;
+  color: #525252;
+  text-align: center;
+}
+
+/* Buttons */
+
+#submit_button{
+  background-color: #60f060;
+  border: 0px;
+  padding: 0px;
+  outline-style: none;
+  font-size: 180%;
+  color: #525252;
+  text-align: center;
+  border-radius: 25px;
+  width: 120%;
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
+  transform: translate(-8%, 175%);
 }

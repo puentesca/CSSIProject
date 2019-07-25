@@ -57,11 +57,16 @@ class FormPage(webapp2.RequestHandler):
         for address in location_addresses:
             formatted_addresses.append(address["formatted_address"])
         print("formatted_addresses")
+        url3 = "https://www.google.com/maps/embed/v1/view?center=" + str(lat) + "," + str(lng) + "&key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo"
+        print(url3)
         # location_suggestions = json_data[results][0, 15]["formatted_address"]
         template_values =  {
         "addr": formatted_addresses,
         # "suggestions": location_suggestions
         }
+
+        #AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo
+
 
 
         self.response.write(welcome_template.render(template_values))
@@ -85,6 +90,8 @@ class FormPage(webapp2.RequestHandler):
         #Submits the record to the email
         emailer = SubmissionHandler()
         emailer.sendSubmission(report_record)
+        welcome_template = the_jinja_env.get_template('/templates/submission-confirmed-page.html')
+        self.response.write(welcome_template.render())
 
 
 # the handler section

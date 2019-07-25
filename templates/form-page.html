@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/form-page.css">
     <script src="scripts/main-page.js"></script>
     <title></title>
   </head>
   <body>
-    <div id = "header_bar">
+    <!-- <div id = "header_bar">
       <h1 class = "text" id = "header_text">REPORT</h1>
-    </div>
+    </div> -->
     <div id = "body_background">
-      <form method = "post">
-        Your Name:<br>
-        <input type = "textbox" name = "name"><br>
-        Your Email:<br>
-        <input type = "textbox" name = "email"><br>
-        Image Url:<br>
-        <input type = "textbox" name = "image-url"> <br>
-        Desciption:<br>
-        <input type = "textbox" name = "description"><br>
-        Urgency Level:<br>
-        <select multiple name = "urgency-level">
-          <option value = "Low">Low</option>
-          <option value = "Medium">Medium</option>
-          <option value = "High">High</option>
-          <option value = "Urgent">Urgent</option>
-        </select><br>
-        Location:<br>
-        <input type = "textbox" name = "location"><br>
-        Location Suggestions: <br>
-        <select name = "location suggestions">
-        {% for add in addr %}
-          <option value = "{{add}}">{{add}}</option>
-        {% endfor %}
-        <p>{{addr}}</p>
-        Tags:<br>
-        <select name = "tags">
-          <option value = "tag0">tag0</option>
-          <option value = "tag1">tag1</option>
-          <option value = "tag2">tag2</option>
-          <option value = "tag3">tag3</option>
-        </select><br>
-        <input type = "submit">
-      </form>
+        <div id = "form_background">
+          <div id = "form_background_header_image">
+            <h1 class = "text" id = "header_text">R E P O R T</h1>
+          </div>
+          <form method = "post">
+            <h3 class = "text textbox_header" id = "name_header">Full Name</h3>
+            <div class = "textbox_holder" id = "name_div">
+              <input class = "textbox" id = "name_textbox" type = "textbox" name = "name"><br>
+            </div>
+            <h3 class = "text textbox_header" id = "email_header">Email Address</h3>
+            <div class = "textbox_holder" id = "email_div">
+              <input class = "textbox" id = "email_textbox" type = "textbox" name = "email"><br>
+            </div>
+            <h3 class = "text textbox_header" id = "image_url_header">Image Url</h3>
+            <div class = "textbox_holder" id = "image_url_div">
+              <input class = "textbox" id = "image_url_textbox" type = "textbox" name = "image-url"> <br>
+            </div>
+            <h3 class = "text textbox_header" id = "description_header">Desciption</h3>
+            <div class = "textbox_holder" id = "description_div">
+              <input class = "textbox" id = "description_textbox" type = "textbox" name = "description"><br>
+            </div>
+            <h3 class = "text textbox_header" id = "urgency_header">Urgency Level</h3>
+            <select name = "urgency-level">
+              <option value = "Low">Low</option>
+              <option value = "Medium">Medium</option>
+              <option value = "High">High</option>
+              <option value = "Urgent">Urgent</option>
+            </select><br>
+            <h3 class = "text textbox_header" id = "location_header">Location</h3>
+            <!-- <input type = "textbox" name = "location"><br> -->
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=47.6062,-122.3321&key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo" allowfullscreen></iframe> <br>
+            <h3 class = "text textbox_header" id = "location_suggestions_header">Location Suggestions</h3>
+            <select name = "location suggestions">
+            {% for add in addr %}
+              <option value = "{{add}}">{{add}}</option>
+            {% endfor %}
+            <p>{{addr}}</p>
+            Tags:<br>
+          </select>
+            <select name = "tags">
+              <option value = "tag0">tag0</option>
+              <option value = "tag1">tag1</option>
+              <option value = "tag2">tag2</option>
+              <option value = "tag3">tag3</option>
+            </select><br>
+              <input type = "submit" id = "submit_button">
+        </form>
+        <div id = "form_background_footer_image">
+        </div>
+      </div>
     </div>
   </body>
 </html>

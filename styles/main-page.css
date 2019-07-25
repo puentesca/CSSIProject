@@ -1,5 +1,16 @@
 body{
   background-color: #b3b3b3;
+  width: 100%;
+  margin: 0;
+}
+
+.text{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.back{
+  width: 100%;
+  background-color: #383535;
 }
 
 .clouds{
@@ -7,9 +18,10 @@ body{
   height: 800px;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1080px;
+  width: 64%;
   margin: 0 auto;
   padding-top: 15px;
+  border: 10px #4a4242 solid;
 }
 
 /* TITLE AT VERY TOP */
@@ -25,16 +37,18 @@ body{
   font-size: 28px;
   color: #dbac2a;
   text-align: center;
+  font-style: bold;
 }
 
 /* PARAGRAPH */
 #mission-statement{
-  font-size: 24px;
+  font-size: 1.4vw;
   color: #cf5e32;
   background-color: rgba(0,0,0,0);
   text-align: center;
-  margin: 0 100px;
+  margin: 0 5vw;
   line-height: 1.5em;
+  font-style: bold;
 }
 
 /* TAG BUTTON */
@@ -45,10 +59,10 @@ body{
 #tag-definition-button{
   border: 2px #4d83db;
   background-color: #4d83db;
-  font-size: 35px;
+  font-size: 2.4vw;
   border-radius: 7.5px;
   position: relative;
-  left: 395px;
+  left: 25vw;
 }
 
 /* COUNCIL BUTTON */
@@ -59,10 +73,10 @@ body{
 #council-definition-button{
   border: 2px #4d83db;
   background-color: #4d83db;
-  font-size: 35px;
+  font-size: 2.4vw;
   border-radius: 7.5px;
   position: relative;
-  left: 695px;
+  left: 38.5vw;
 }
 
 /* REPORT BUTTON */
@@ -78,13 +92,22 @@ body{
 #report-button{
   border: 2px #e34f44;
   background-color: #e34f44;
-  font-size: 45px;
+  font-size: 3vw;
+  border-radius: 7.5px;
   position: relative;
-  left: 575px;
+  left : 34.226190476190474vw;
 }
 
 /* Whitespace at the bottom */
 #bottom-of-page-whitespace{
-  min-height: 350px;
+  min-height: 150px;
   display: block;
+}
+
+
+#credits{
+  height: 10vh;
+  position:relative;
+  width: 100%;
+  background-color: #383535;
 }

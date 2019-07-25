@@ -1,6 +1,25 @@
+body{
+  background-color: #b3b3b3;
+  width: 100%;
+  margin: 0;
+}
+
+.text{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
 #confirmation-message {
   text-align: center;
 }
+
+
 #cfc-bottom{
+  height: 13vh;
+  position:relative;
+  width: 100%;
+  background-color: #383535;
   text-align: center;
+  color: #c7c7c7;
 }

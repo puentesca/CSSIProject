@@ -10,10 +10,10 @@ body{
 
 .back{
   width: 100%;
-  background-color: #383535;
+  background-color: #ededed;
 }
 
-.clouds{
+.picture{
   background-image: url("http://images.unsplash.com/photo-1528055823578-1c18ae59ef8c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
   height: 800px;
   background-position: center;
@@ -21,13 +21,13 @@ body{
   width: 64%;
   margin: 0 auto;
   padding-top: 15px;
-  border: 10px #4a4242 solid;
+  border: 10px #383535 solid;
+  text-align: center;
 }
 
 /* TITLE AT VERY TOP */
 #main-header{
-  color: #a5ffa1;
-  /* color: #ebba34; */
+  color: #383535;
   text-align: center;
   font-size: 45px;
 }
@@ -35,20 +35,23 @@ body{
 /* HEADER ABOVE PARAGRAPH */
 #missionHeader{
   font-size: 28px;
-  color: #dbac2a;
+  color: #383535;
   text-align: center;
   font-style: bold;
+  background-color:rgb(255, 99, 51, 0.75);
+  display: inline-block;
+  border-radius: 7.5px;
 }
 
 /* PARAGRAPH */
 #mission-statement{
   font-size: 1.4vw;
-  color: #cf5e32;
-  background-color: rgba(0,0,0,0);
+  color: #3b3b3b;
   text-align: center;
   margin: 0 5vw;
   line-height: 1.5em;
-  font-style: bold;
+  border-radius: 7.5px;
+  background-color:rgb(163, 162, 162, 0.8);
 }
 
 /* TAG BUTTON */
@@ -59,10 +62,25 @@ body{
 #tag-definition-button{
   border: 2px #4d83db;
   background-color: #4d83db;
-  font-size: 2.4vw;
+  min-height: 80px;
+  min-width: 355px;
+  font-size: 35px;
   border-radius: 7.5px;
-  position: relative;
-  left: 25vw;
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#infoButtonsholder{
+  display: flex;
+  height: 250px;
+  justify-content: center;
+}
+
+#submitButtonholder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* COUNCIL BUTTON */
@@ -73,41 +91,41 @@ body{
 #council-definition-button{
   border: 2px #4d83db;
   background-color: #4d83db;
-  font-size: 2.4vw;
+  min-height: 80px;
+  min-width: 430px;
+  font-size: 35px;
   border-radius: 7.5px;
-  position: relative;
-  left: 38.5vw;
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* REPORT BUTTON */
-/* #whitespace-between-definitionsAndreport{
-  min-height: 150px;
-  display: block;
-} */
-
 #report-button:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #report-button{
-  border: 2px #e34f44;
-  background-color: #e34f44;
-  font-size: 3vw;
+  border: 2px tomato;
+  background-color: tomato;
+  margin-top: 250px;
+  min-height: 80px;
+  min-width: 500px;
+  font-size: 40px;
   border-radius: 7.5px;
-  position: relative;
-  left : 34.226190476190474vw;
 }
 
 /* Whitespace at the bottom */
 #bottom-of-page-whitespace{
-  min-height: 150px;
+  min-height: 30px;
   display: block;
 }
 
-
 #credits{
-  height: 10vh;
+  height: 13vh;
   position:relative;
   width: 100%;
   background-color: #383535;
+  text-align: center;
+  color: #c7c7c7;
 }

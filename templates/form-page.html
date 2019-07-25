@@ -2,11 +2,12 @@
 <html>
   <head>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <link rel="stylesheet" href="styles/main-page.css">
+    <link rel="stylesheet" href="styles/form-page.css">
     <script src="scripts/main-page.js"></script>
     <title></title>
   </head>
   <body>
+<<<<<<< HEAD
     <form method = "post">
       Your Name:<br>
       <input type = "textbox" name = "name"><br>
@@ -41,5 +42,45 @@
       <input type = "submit">
     </form>
     <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=47.6062,-122.3321&key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo" allowfullscreen></iframe>
+=======
+    <div id = "header_bar">
+      <h1 class = "text" id = "header_text">REPORT</h1>
+    </div>
+    <div id = "body_background">
+      <form method = "post">
+        Your Name:<br>
+        <input type = "textbox" name = "name"><br>
+        Your Email:<br>
+        <input type = "textbox" name = "email"><br>
+        Image Url:<br>
+        <input type = "textbox" name = "image-url"> <br>
+        Desciption:<br>
+        <input type = "textbox" name = "description"><br>
+        Urgency Level:<br>
+        <select multiple name = "urgency-level">
+          <option value = "Low">Low</option>
+          <option value = "Medium">Medium</option>
+          <option value = "High">High</option>
+          <option value = "Urgent">Urgent</option>
+        </select><br>
+        Location:<br>
+        <input type = "textbox" name = "location"><br>
+        Location Suggestions: <br>
+        <select name = "location suggestions">
+        {% for add in addr %}
+          <option value = "{{add}}">{{add}}</option>
+        {% endfor %}
+        <p>{{addr}}</p>
+        Tags:<br>
+        <select name = "tags">
+          <option value = "tag0">tag0</option>
+          <option value = "tag1">tag1</option>
+          <option value = "tag2">tag2</option>
+          <option value = "tag3">tag3</option>
+        </select><br>
+        <input type = "submit">
+      </form>
+    </div>
+>>>>>>> 3785baaa0984a18d5647bdb6dea8758123872bd4
   </body>
 </html>

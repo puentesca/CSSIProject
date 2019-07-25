@@ -44,43 +44,44 @@ class FormPage(webapp2.RequestHandler):
     def get(self):
         welcome_template = the_jinja_env.get_template('/templates/form-page.html')
 
-        url = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + api2key
-        api_location = urlfetch.fetch( url, method="POST")
-        json_data = json.loads(api_location.content)
-        lat = json_data["location"]["lat"]
-        lng = json_data["location"]["lng"]
-        url2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+str(lat)+","+str(lng)+"&key=" + api2key
-        api_location = urlfetch.fetch(url2, method="POST")
-        json_data = json.loads(api_location.content)
-        location_addresses = json_data["results"]
-        formatted_addresses = []
-        for address in location_addresses:
-            formatted_addresses.append(address["formatted_address"])
-        print("formatted_addresses")
-        url3 = "https://www.google.com/maps/embed/v1/view?center=" + str(lat) + "," + str(lng) + "&key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo"
-        print(url3)
-        # location_suggestions = json_data[results][0, 15]["formatted_address"]
-        template_values =  {
-        "addr": formatted_addresses,
-        # "suggestions": location_suggestions
-        }
+        # url = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + api2key
+        # api_location = urlfetch.fetch( url, method="POST")
+        # json_data = json.loads(api_location.content)
+        # print(json_data)
+        # lat = json_data["location"]["lat"]
+        # lng = json_data["location"]["lng"]
+        # url2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+str(lat)+","+str(lng)+"&key=" + api2key
+        # api_location = urlfetch.fetch(url2, method="POST")
+        # json_data = json.loads(api_location.content)
+        # location_addresses = json_data["results"]
+        # formatted_addresses = []
+        # for address in location_addresses:
+        #     formatted_addresses.append(address["formatted_address"])
+        # print("formatted_addresses")
+        # url3 = "https://www.google.com/maps/embed/v1/view?center=" + str(lat) + "," + str(lng) + "&key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo"
+        # print(url3)
+        # # location_suggestions = json_data[results][0, 15]["formatted_address"]
+        # template_values =  {
+        # "addr": formatted_addresses,
+        # # "suggestions": location_suggestions
+        # }
 
         #AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo
 
 
 
-        self.response.write(welcome_template.render(template_values))
+        #self.response.write(welcome_template.render(template_values))
+        self.response.write(welcome_template.render())
     def post(self):
         report_name =  self.request.get("name")
         report_email = self.request.get("email")
-
 
         report_image_url = self.request.get("image-url")
         report_description = self.request.get("description")
         report_location = self.request.get("location")
         report_location = self.request.get("location suggestions")
         report_tags = self.request.get("tags")
-        report_urgency = self.request.get("urgency-level")
+        report_urgency = self.get_urgency()
         #Creates a local record that is printable
         report_record = LocalSubmissionRecord(name = report_name, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
         #Converts the recrod to a database-readable version
@@ -93,6 +94,43 @@ class FormPage(webapp2.RequestHandler):
         welcome_template = the_jinja_env.get_template('/templates/submission-confirmed-page.html')
         self.response.write(welcome_template.render())
 
+# Returns the selected urgency level
+    def get_urgency(self):
+        urgency = ""
+        urgency_names = ["urgency_low","urgency_medium","urgency_high","urgency_urgent"]
+        urgency_string_conversions= {
+            "urgency_low": "Low",
+            "urgency_medium": "Medium",
+            "urgency_high": "High",
+            "urgency_urgent": "Urgent",
+        }
+        for name in urgency_names:
+            if(self.request.get(name) == "on"):
+                urgency = urgency_string_conversions[name];
+            #If no urgency is selected
+        if(urgency == ""):
+            urgency = "Low";
+        return urgency;
+
+ # Returns the selected tags
+    #     def get_tags(self):
+    #         urgency = ""
+    #         urgency_names = ["urgency_low","urgency_medium","urgency_high","urgency_urgent"]
+    #         urgency_string_conversions= {
+    #             "urgency_low": "Low",
+    #             "urgency_medium": "Medium",
+    #             "urgency_high": "High",
+    #             "urgency_urgent": "Urgent",
+    #         }
+    #         for name in urgency_names:
+    #             if(self.request.get(name) == "on"):
+    #                 urgency = urgency_string_conversions[name];
+    #             #If no urgency is selected
+    #         if(urgency == ""):
+    #             urgency = "Low";
+    #         return urgency;
+
+
 
 # the handler section
 class SubmissionConfirmedPage(webapp2.RequestHandler):
@@ -101,6 +139,8 @@ class SubmissionConfirmedPage(webapp2.RequestHandler):
         self.response.write(welcome_template.render())
     def post(self):
         pass
+
+
 
 
 

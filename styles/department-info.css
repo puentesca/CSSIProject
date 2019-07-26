@@ -21,8 +21,9 @@ body{
   font-size: 45px;
 }
 
+/* CITY COUNCIL HEADER */
 #City_Council_Info_Header{
-  color: #53a2fc;
+  color: tomato;
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 50px;
@@ -32,7 +33,7 @@ body{
 
 /* QUSTION AND ANSWER 1 */
 #question1{
-  color: #53a2fc;
+  color: tomato;
   margin-top: 20px;
   margin-left: 45px;
   font-size: 25px;
@@ -46,7 +47,7 @@ body{
 
 /* QUSTION AND ANSWER 2 */
 #question2{
-  color: #53a2fc;
+  color: tomato;
   margin-top: 20px;
   margin-left: 45px;
   font-size: 25px;
@@ -60,7 +61,7 @@ body{
 
 /* QUSTION AND ANSWER 3 */
 #question3{
-  color: #53a2fc;
+  color: tomato;
   margin-top: 20px;
   margin-left: 45px;
   font-size: 25px;
@@ -74,7 +75,7 @@ body{
 
 /* QUSTION AND ANSWER 4 */
 #question4{
-  color: #53a2fc;
+  color: tomato;
   margin-top: 20px;
   margin-left: 45px;
   font-size: 25px;

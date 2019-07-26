@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/form-page.css">
-    <script src="scripts/main-page.js"></script>
+    <script src="scripts/form-page.js"></script>
     <title></title>
   </head>
   <body>
@@ -17,46 +17,79 @@
             <h1 class = "text" id = "header_text">R E P O R T</h1>
           </div>
           <form method = "post">
-            <h3 class = "text textbox_header" id = "name_header">Full Name</h3>
-            <div class = "textbox_holder" id = "name_div">
+            <h2 class = "text textbox_header" id = "name_header">Full Name</h2>
               <input class = "textbox" id = "name_textbox" type = "textbox" name = "name"><br>
-            </div>
-            <h3 class = "text textbox_header" id = "email_header">Email Address</h3>
-            <div class = "textbox_holder" id = "email_div">
+            <h2 class = "text textbox_header" id = "email_header">Email Address</h2>
               <input class = "textbox" id = "email_textbox" type = "textbox" name = "email"><br>
-            </div>
-            <h3 class = "text textbox_header" id = "image_url_header">Image Url</h3>
-            <div class = "textbox_holder" id = "image_url_div">
+            <h2 class = "text textbox_header" id = "image_url_header">Image Url</h2>
               <input class = "textbox" id = "image_url_textbox" type = "textbox" name = "image-url"> <br>
-            </div>
-            <h3 class = "text textbox_header" id = "description_header">Desciption</h3>
-            <div class = "textbox_holder" id = "description_div">
+            <h2 class = "text textbox_header" id = "description_header">Desciption</h2>
               <input class = "textbox" id = "description_textbox" type = "textbox" name = "description"><br>
+            <h2 class = "text textbox_header" id = "urgency_header">Urgency Level</h2>
+            <div id = "urgency_holder">
+              <div class = "toggle_checkbox_holder_urgency_low toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "urgency_low_text">Low</p>
+              </div>
+              <div class = "toggle_checkbox_holder_urgency_medium toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "urgency_medium_text">Medium</p>
+              </div>
+              <div class = "toggle_checkbox_holder_urgency_high toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "urgency_high_text">High</p>
+              </div>
+              <div class = "toggle_checkbox_holder_urgency_urgent toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "urgency_urgent_text">Urgent</p>
+              </div>
+
+              <!-- Input checkboxes -->
+              <input type = "checkbox" name = "urgency_low" id = "urgency_low" class = "toggle_checkbox"></input>
+              <input type = "checkbox" name = "urgency_medium" id = "urgency_medium" class = "toggle_checkbox"> </input>
+              <input type = "checkbox" name = "urgency_high" id = "urgency_high" class = "toggle_checkbox"> </input>
+              <input type = "checkbox" name = "urgency_urgent" id = "urgency_urgent" class = "toggle_checkbox"> </input>
+
             </div>
-            <h3 class = "text textbox_header" id = "urgency_header">Urgency Level</h3>
-            <select name = "urgency-level">
+            <!-- <select name = "urgency-level">
               <option value = "Low">Low</option>
               <option value = "Medium">Medium</option>
               <option value = "High">High</option>
               <option value = "Urgent">Urgent</option>
-            </select><br>
-            <h3 class = "text textbox_header" id = "location_header">Location</h3>
+            </select><br> -->
+            <h2 class = "text textbox_header" id = "location_header">Location</h2>
             <!-- <input type = "textbox" name = "location"><br> -->
             <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=47.6062,-122.3321&key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo" allowfullscreen></iframe> <br>
-            <h3 class = "text textbox_header" id = "location_suggestions_header">Location Suggestions</h3>
-            <select name = "location suggestions">
-            {% for add in addr %}
-              <option value = "{{add}}">{{add}}</option>
-            {% endfor %}
-            <p>{{addr}}</p>
-            Tags:<br>
-          </select>
-            <select name = "tags">
-              <option value = "tag0">tag0</option>
-              <option value = "tag1">tag1</option>
-              <option value = "tag2">tag2</option>
-              <option value = "tag3">tag3</option>
-            </select><br>
+            <!-- <h2 class = "text textbox_header" id = "location_suggestions_header">Location Suggestions</h2> -->
+            <!-- <select name = "location suggestions">
+            { % for add in addr % }
+              <option value = "{ {add} }">{ {add} }</option>
+            { % endfor % }
+            <p>{ {addr} }</p>
+            </select> -->
+
+
+            <h2 class  = "text textbox_header" id = "tags_header"> Tags</h2>
+
+            <div id = "tags_holder">
+              <div class = "toggle_checkbox_holder_tag_vandalism toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "tag_vandalism_text">Vandalism</p>
+              </div>
+              <div class = "toggle_checkbox_holder_tag_drug toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "tag_drug_text">Drug(s)</p>
+              </div>
+              <div class = "toggle_checkbox_holder_tag_loitering toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "tag_loitering_text">Loitering</p>
+              </div>
+              <div class = "toggle_checkbox_holder_tag_underage_substance_use toggle_checkbox_holder">
+                <p class = "text toggle_checkbox_text" id = "tag_underage_substance_use_text">Underage Substance Use</p>
+              </div>
+
+              <!-- tags checkboxes -->
+              <input type = "checkbox" name = "tag_vandalism" id = "tag_vandalism" class = "toggle_checkbox"></input>
+              <input type = "checkbox" name = "tag_drug" id = "tag_drug" class = "toggle_checkbox"> </input>
+              <input type = "checkbox" name = "tag_loitering" id = "tag_loitering" class = "toggle_checkbox"> </input>
+              <input type = "checkbox" name = "tag_underage_substance_use" id = "tag_underage_substance_use" class = "toggle_checkbox"> </input>
+            </div>
+
+
+              <br>
               <input type = "submit" id = "submit_button">
         </form>
         <div id = "form_background_footer_image">

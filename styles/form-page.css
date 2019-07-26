@@ -80,21 +80,11 @@ body {
 
 
 /* Textboxes  */
-.textbox_holder{
-  background-color: #fafcff;
-  border: 0px;
-  padding: 0px;
-  border-radius: 25px;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  min-height: 60px;
-}
 
 .textbox{
   background-color: #fafcff;
-  width: 92%;
-  min-height: 90%;
+  width: 100%;
+  min-height: 60px;
 
   border: 0px;
   padding: 0px;
@@ -102,7 +92,76 @@ body {
   font-size: 180%;
   color: #525252;
   text-align: center;
+  border-radius: 25px;
 }
+
+.textbox:hover
+{
+  background-color: #474747;
+  color:white;
+}
+.textbox_holder:hover
+{
+  background-color: black;
+}
+
+/* Checkbox Selection */
+
+#urgency_holder
+{
+  min-height: 60px;
+  background-color: #c9c9c9;
+  border: 0px;
+  padding: 0px;
+
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px;
+}
+
+/* Tags */
+#tags_holder
+{
+  min-height: 60px;
+  background-color: #c9c9c9;
+  border: 0px;
+  padding: 0px;
+
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px;
+}
+
+/*  background image to show visually that a checbox is selected*/
+.toggle_checkbox_holder
+{
+  background-color: #ffffff;
+  border: 0px;
+  padding: 0px;
+
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  min-width: 60px;
+  border-radius: 25px;
+}
+
+/* Invisible checkbox element over div */
+.toggle_checkbox
+{
+  transform: scaleX(1) scaleY(1);
+  display: none;
+}
+
+.checkbox_on
+{
+  background-color: tomato;
+}
+
 
 /* Buttons */
 

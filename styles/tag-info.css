@@ -247,6 +247,20 @@ body{
   font-size: 20px;
 }
 
+/* Miscellaneous Maintenance */
+#miscellaneous-maintenance-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#miscellaneous-maintenance-definition{
+  margin-left: 45px;
+  margin-bottom: 75px;
+  font-size: 20px;
+}
+
 /* BACK TO HOME BUTTON */
 #backtohomebutton:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);

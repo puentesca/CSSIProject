@@ -8,13 +8,46 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+/* TITLE AT VERY TOP */
+#main-header{
+  color: #383535;
+  text-align: center;
+  font-size: 45px;
+}
 
-
+/* CONFIRMATION MESSAGE */
 #confirmation-message {
+  color: tomato;
+  font-size: 60px;
   text-align: center;
 }
 
+/* BACK TO HOME BUTTON */
+#whitespace-between-message-button{
+  min-height: 50px;
+  display: block;
+}
 
+#backtohomebutton:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#backtohomebutton{
+  margin-left: 580px;
+  min-height: 80px;
+  min-width: 500px;
+  font-size: 45px;
+  border: 2px #4d83db;
+  background-color: #4d83db;
+  border-radius: 7.5px;
+}
+
+/* WHITE SPACE TO HAVE THE GREY BAR BE AT THE BOTTOM */
+#whitespace{
+  min-height: 292px;
+  display: block;
+}
+
+/* FOOTER */
 #cfc-bottom{
   height: 13vh;
   position:relative;

@@ -65,28 +65,106 @@
             </select> -->
 
 
+
+
             <h2 class  = "text textbox_header" id = "tags_header"> Tags</h2>
+            <!-- Holds all the rows of tags -->
+            <div id = tag_row_holder>
+              <!-- First Row Tags -->
+              <div class = "tags_holder" id = "tags_first_row">
 
-            <div id = "tags_holder">
-              <div class = "toggle_checkbox_holder_tag_vandalism toggle_checkbox_holder">
-                <p class = "text toggle_checkbox_text" id = "tag_vandalism_text">Vandalism</p>
-              </div>
-              <div class = "toggle_checkbox_holder_tag_drug toggle_checkbox_holder">
-                <p class = "text toggle_checkbox_text" id = "tag_drug_text">Drug(s)</p>
-              </div>
-              <div class = "toggle_checkbox_holder_tag_loitering toggle_checkbox_holder">
-                <p class = "text toggle_checkbox_text" id = "tag_loitering_text">Loitering</p>
-              </div>
-              <div class = "toggle_checkbox_holder_tag_underage_substance_use toggle_checkbox_holder">
-                <p class = "text toggle_checkbox_text" id = "tag_underage_substance_use_text">Underage Substance Use</p>
+                <div class = "toggle_checkbox_holder_tag_vandalism toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_vandalism_text">Vandalism</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_drug toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_drug_text">Drug(s)</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_loitering toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_loitering_text">Loitering</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_underage_substance_use toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_underage_substance_use_text">Underage Substance Use</p>
+                </div>
+
+                <!-- tags checkboxes -->
+                <!-- Row 1 -->
+                <input type = "checkbox" name = "tag_vandalism" id = "tag_vandalism" class = "toggle_checkbox"></input>
+                <input type = "checkbox" name = "tag_drug" id = "tag_drug" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_loitering" id = "tag_loitering" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_underage_substance_use" id = "tag_underage_substance_use" class = "toggle_checkbox"> </input>
               </div>
 
-              <!-- tags checkboxes -->
-              <input type = "checkbox" name = "tag_vandalism" id = "tag_vandalism" class = "toggle_checkbox"></input>
-              <input type = "checkbox" name = "tag_drug" id = "tag_drug" class = "toggle_checkbox"> </input>
-              <input type = "checkbox" name = "tag_loitering" id = "tag_loitering" class = "toggle_checkbox"> </input>
-              <input type = "checkbox" name = "tag_underage_substance_use" id = "tag_underage_substance_use" class = "toggle_checkbox"> </input>
-            </div>
+              <!-- Row 2 Tags -->
+              <div class = "tags_holder">
+                <!-- Second Row -->
+                <div class = "toggle_checkbox_holder_tag_public_indecency toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_public_indeceny_text">Public Indecency</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_unsanitary toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_unsanitary_text">Unsanitary</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_litter toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_litter_text">Litter/Trash</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_biohazards toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_biohazards_text">Biohazards</p>
+                </div>
+
+                <input type = "checkbox" name = "tag_public_indecency" id = "tag_public_indecency" class = "toggle_checkbox"></input>
+                <input type = "checkbox" name = "tag_unsanitary" id = "tag_unsanitary" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_litter" id = "tag_litter" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_biohazards" id = "tag_biohazards" class = "toggle_checkbox"> </input>
+              </div>
+
+
+              <!-- Row 3 Tags -->
+              <div class = "tags_holder">
+                <!-- Third Row -->
+                <div class = "toggle_checkbox_holder_tag_outbreak toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_public_outbreak_text">Outbreak</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_pollution toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_pollution_text">Pollution</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_environmental_safety toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_environmental_safety_text">Environmental Safety</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_technical_connectivity toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_technical_connectivity_text">Technical Connectivity</p>
+                </div>
+
+                <input type = "checkbox" name = "tag_outbreak" id = "tag_outbreak" class = "toggle_checkbox"></input>
+                <input type = "checkbox" name = "tag_pollution" id = "tag_pollution" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_environmental_safety" id = "tag_environmental_safety" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_technical_connectivity" id = "tag_technical_connectivity" class = "toggle_checkbox"> </input>
+              </div>
+
+
+              <!-- Row 4 Tags -->
+              <div class = "tags_holder" id = "tags_last_row">
+                <!-- Fourth Row -->
+                <div class = "toggle_checkbox_holder_tag_structural_integrity toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_structural_integrity_text">Structural Integrity</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_transportation_infrastructure toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_transportation_infrastructure_text">Transportation Infrastructure</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_accessibility toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_accessibility_text">Accessibility</p>
+                </div>
+                <div class = "toggle_checkbox_holder_tag_misc_maintenance toggle_checkbox_holder">
+                  <p class = "text toggle_checkbox_text" id = "tag_misc_maintenance_text">Misc. Maintenance</p>
+                </div>
+
+                <input type = "checkbox" name = "tag_structural_integrity" id = "tag_structural_integrity" class = "toggle_checkbox"></input>
+                <input type = "checkbox" name = "tag_transportation_infrastructure" id = "tag_transportation_infrastructure" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_accessibility" id = "tag_accessibility" class = "toggle_checkbox"> </input>
+                <input type = "checkbox" name = "tag_misc_maintenance" id = "tag_misc_maintenance" class = "toggle_checkbox"> </input>
+              </div>
+          </div>
+
+
+
 
 
               <br>

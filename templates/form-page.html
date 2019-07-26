@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/form-page.css">
     <script src="scripts/form-page.js"></script>
@@ -24,7 +25,7 @@
             <h2 class = "text textbox_header" id = "image_url_header">Image Url</h2>
               <input class = "textbox" id = "image_url_textbox" type = "textbox" name = "image-url"> <br>
             <h2 class = "text textbox_header" id = "description_header">Desciption</h2>
-              <input class = "textbox" id = "description_textbox" type = "textbox" name = "description"><br>
+              <textarea rows = "8" cols = "50" class = "textbox" id = "description_textbox" type = "textbox" name = "description"></textarea><br>
             <h2 class = "text textbox_header" id = "urgency_header">Urgency Level</h2>
             <div id = "urgency_holder">
               <div class = "toggle_checkbox_holder_urgency_low toggle_checkbox_holder">
@@ -163,12 +164,8 @@
               </div>
           </div>
 
-
-
-
-
               <br>
-              <input type = "submit" id = "submit_button">
+              <input type = "submit" id = "submit_button" value = "S U B M I T"></input>
         </form>
         <div id = "form_background_footer_image">
         </div>

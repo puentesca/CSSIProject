@@ -65,7 +65,6 @@ class FormPage(webapp2.RequestHandler):
         # "addr": formatted_addresses,
         # # "suggestions": location_suggestions
         # }
-
         #AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo
 
 
@@ -80,7 +79,7 @@ class FormPage(webapp2.RequestHandler):
         report_description = self.request.get("description")
         report_location = self.request.get("location")
         report_location = self.request.get("location suggestions")
-        report_tags = self.request.get("tags")
+        report_tags = self.get_tags()
         report_urgency = self.get_urgency()
         #Creates a local record that is printable
         report_record = LocalSubmissionRecord(name = report_name, email = report_email, image_url = report_image_url, description = report_description, location = report_location, tags = report_tags, urgency = report_urgency)
@@ -111,6 +110,35 @@ class FormPage(webapp2.RequestHandler):
         if(urgency == ""):
             urgency = "Low";
         return urgency;
+
+    def get_tags(self):
+        tags = []
+        tag_names = ["tag_vandalism","tag_drug","tag_loitering","tag_underage_substance_use", "tag_public_indecency", "tag_unsanitary", "tag_litter", "tag_biohazards", "tag_outbreak", "tag_pollution", "tag_environmental_safety", "tag_technical_connectivity", "tag_structural_integrity", "tag_transportation_infrastructure", "tag_accessibility", "tag_misc_maintenance"]
+        tag_string_conversions= {
+            "tag_vandalism": "Vandalism",
+            "tag_drug": "Drug(s)",
+            "tag_loitering": "Loitering",
+            "tag_underage_substance_use": "Underage Substance Use",
+            "tag_public_indecency": "Public Indecency",
+            "tag_unsanitary": "Unsanitary",
+            "tag_litter": "Litter",
+            "tag_biohazards": "Biohazards",
+            "tag_outbreak": "Outbreak",
+            "tag_pollution": "Pollution",
+            "tag_environmental_safety": "Environmental Safety",
+            "tag_technical_connectivity": "Technical Connectivity",
+            "tag_structural_integrity": "Structural Integrity",
+            "tag_transportation_infrastructure": "Transportation Infrastructure",
+            "tag_accessibility": "Accessibility",
+            "tag_misc_maintenance": "Misc. Maintenance",
+        }
+        for name in tag_names:
+            if(self.request.get(name) == "on"):
+                tags.append(tag_string_conversions[name]);
+            #If no urgency is selected
+        if(tags == []):
+            tags.append("No tags");
+        return str(tags);
 
  # Returns the selected tags
     #     def get_tags(self):

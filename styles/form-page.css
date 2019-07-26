@@ -121,17 +121,30 @@ body {
 }
 
 /* Tags */
-#tags_holder
+.tags_holder
 {
-  min-height: 60px;
+  min-height: 70px;
   background-color: #c9c9c9;
   border: 0px;
   padding: 0px;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
 
   width: auto;
   display: flex;
   justify-content: space-between;
   border-radius: 25px;
+}
+
+#tags_first_row
+{
+  margin-top: 0px;
+}
+
+#tag_row_holder
+{
+  margin-bottom: 0px;
 }
 
 /*  background image to show visually that a checbox is selected*/
@@ -145,7 +158,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60px;
+  min-height: 70px;
   min-width: 60px;
   border-radius: 25px;
 }

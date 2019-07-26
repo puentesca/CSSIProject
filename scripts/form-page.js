@@ -20,7 +20,7 @@ function init() {
   SetTagButtonToggle(".toggle_checkbox_holder_tag_biohazards", "#tag_biohazards");
 
   //Row 3
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_outbreak", "#tag_outbreak");
+  SetTagButtonToggle(".toggle_checkbox_holder_tag_landscaping_issue", "#tag_landscaping_issue");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_pollution", "#tag_pollution");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_environmental_safety","#tag_environmental_safety");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_technical_connectivity", "#tag_technical_connectivity");

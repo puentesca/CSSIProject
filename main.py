@@ -116,7 +116,7 @@ class FormPage(webapp2.RequestHandler):
         tag_names = ["tag_vandalism","tag_drug","tag_loitering","tag_underage_substance_use", "tag_public_indecency", "tag_unsanitary", "tag_litter", "tag_biohazards", "tag_outbreak", "tag_pollution", "tag_environmental_safety", "tag_technical_connectivity", "tag_structural_integrity", "tag_transportation_infrastructure", "tag_accessibility", "tag_misc_maintenance"]
         tag_string_conversions= {
             "tag_vandalism": "Vandalism",
-            "tag_drug": "Drug(s)",
+            "tag_drug": "Illegal Drug Use",
             "tag_loitering": "Loitering",
             "tag_underage_substance_use": "Underage Substance Use",
             "tag_public_indecency": "Public Indecency",

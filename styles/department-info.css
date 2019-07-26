@@ -1,0 +1,38 @@
+body{
+  background-color: #b3b3b3;
+  width: 100%;
+  margin: 0;
+}
+
+.text{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.back{
+  width: 100%;
+  background-color: #ededed;
+}
+
+#main-header{
+  background-color: #b3b3b3;
+  width: 100%;
+  color: #383535;
+  text-align: center;
+  font-size: 45px;
+}
+
+#City_Council_Info_Header{
+  color: #53a2fc;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 35px;
+}
+
+#question1{
+  color: #53a2fc;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}

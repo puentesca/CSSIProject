@@ -243,7 +243,7 @@ body{
 
 #accessibility-definition{
   margin-left: 45px;
-  margin-bottom: 75px;
+  /* margin-bottom: 75px; */
   font-size: 20px;
 }
 
@@ -259,6 +259,7 @@ body{
   margin-left: 45px;
   margin-bottom: 75px;
   font-size: 20px;
+  margin-bottom: 45px;
 }
 
 /* BACK TO HOME BUTTON */

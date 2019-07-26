@@ -1,23 +1,263 @@
+body{
+  background-color: #b3b3b3;
+  width: 100%;
+  margin: 0;
+}
 
+.text{
+  font-family: 'Montserrat', sans-serif;
+}
 
+.back{
+  width: 100%;
+  background-color: #ededed;
+}
+
+.color-behind-button{
+  min-width: 100%;
+ background-color: #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+
+/* CFC TITLE AT VERY TOP */
+#main-header{
+  background-color: #b3b3b3;
+  width: 100%;
+  color: #383535;
+  text-align: center;
+  font-size: 45px;
+}
+
+/* TAG INFORMATION */
 #Tag_Info_Header {
-  background-color: ;
-  color: ;
-  padding: ;
-  text-align: ;
+  color: tomato;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 35px;
 }
 
-#Explanation_of_Tags {
-  background-color: ;
-  color: ;
-  padding: ;
-  text-align: ;
+#tag-info{
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  font-size: 30px;
 }
 
+/* VANDALISM */
+#vandalism-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
 
+#vandalism-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
 
-.definition {
-  background-color: ;
-  color: ;
-  padding: ;
+/* DRUGS */
+#drug-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#drug-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* LOITERING */
+#loitering-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#loitering-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* UNDERAGE SUBSTANCE USE */
+#underage-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#underage-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* PUBLIC INDECENCY */
+#indecency-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#indecency-definition{
+  margin-left: 45px;
+  margin-right: 45px;
+  font-size: 20px;
+}
+
+/* UNSANITARY */
+#unsanitary-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#unsanitary-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* LITTER/TRASH */
+#litter-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#litter-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* BIOHAZARD */
+#biohazard-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#biohazard-definition{
+  margin-left: 45px;
+  margin-right: 45px;
+  font-size: 20px;
+}
+
+/* OUTBREAK */
+#outbreak-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#outbreak-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* POLLUTION */
+#pollution-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#pollution-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* ENVIRONMENTAL SAFETY */
+#environmental-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#environmental-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* TECHNICAL CONNECTIVITY */
+#technical-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#technical-definition{
+  margin-left: 45px;
+  margin-right: 45px;
+  font-size: 20px;
+}
+
+/* STRUCTURAL INTEGRITY */
+#structural-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#structural-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* TRANSPORTATION */
+#transportation-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#transportation-definition{
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+/* ACCESSIBILITY */
+#accessibility-word{
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 45px;
+  font-size: 25px;
+}
+
+#accessibility-definition{
+  margin-left: 45px;
+  margin-bottom: 75px;
+  font-size: 20px;
+}
+
+/* BACK TO HOME BUTTON */
+#backtohomebutton:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#backtohomebutton{
+  /* margin-left: 580px;
+  margin-bottom: 100px; */
+  min-height: 80px;
+  min-width: 500px;
+  font-size: 45px;
+  border: 2px #4d83db;
+  background-color: #4d83db;
+  border-radius: 7.5px;
 }

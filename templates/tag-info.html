@@ -2,66 +2,77 @@
 <html>
   <head>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <link rel="stylesheet" href="styles/main-page.css">
-    <script src="scripts/main-page.js"></script>
-    <title></title>
+    <link rel="stylesheet" href="styles/tag-info.css">
+    <script src="scripts/tag-info.js"></script>
+    <!-- FONT STYLE -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Tag Information</title>
   </head>
   <body>
 
+<!-- NAME AT VERY TOP -->
+<h1 class = "text" id = "main-header">CitizensForCommunity</h1>
 
-    <h1 id="Tag_Info_Header">Tag Information</h1>
+<!-- WHITE BACKGROUND FOR TEXT -->
+<section class = "back">
 
-    <h2 id="Explanation_of_Tags">Tags in the CitizensForCommunity web application is used to allow users to
-      refine their search and accurately classify the issue they're reporting, essentially
-      making it easier for the right people to use the right resources to resolve the problem at hand </h2>
+<!-- TAG INFO HEADER -->
+<div class = "text" id = "Tag_Info_Header"><br><b>Tag Information:</b></div>
+  <div class = "text" id = "tag-info">Tags in the CitizensForCommunity web application is used to allow users to refine their search and accurately classify the issue they're reporting, essentially making it easier for the right people to use the right resources to resolve the problem at hand. </div>
 
+<!-- TAGS AND DEFINITIONS -->
+<div class = "text" id = "vandalism-word">Vandalism:</div>
+  <div class = "text" id = "vandalism-definition">If you witness action involving deliberate destruction of or damage to public or private property.</div>
 
-    <h3 class="definition">Vandalism</h3>
-    <p>Vandalism: If you witness action involving deliberate destruction of or damage to public or private property.</p>
+<div class = "text" id = "drug-word">Drug(s):</div>
+  <div class = "text" id = "drug-definition">If you witness any drug related actions such as selling, using, or disposing of any harmful paraphernalia.</div>
 
-    <h3 class="definition">Drugs</h3>
-    <p>Drug(s): If you witness any drug related actions such as selling, using, or disposing of any harmful paraphernalia.</p>
+<div class = "text" id = "loitering-word">Loitering:</div>
+  <div class = "text" id = "loitering-definition">If you witness individuals/groups of people standing or waiting around idly or without apparent purpose in a prohibited area.</div>
 
-  <h3 class="definition">Loitering</h3>
-  <p>Loitering: If you witness individuals/groups of people standing or waiting around idly or without apparent purpose in a prohibited area.</p>
+<div class = "text" id = "underage-word">Underage Substance:</div>
+  <div class = "text" id = "underage-definition">If you witness a visibly underage individual partaking in any drug/alcohol activities.</div>
 
-<h3 class="definition">Underage Substance</h3>
-<p>Underage Substance Use: If you witness a visibly underage individual partaking in any drug/alcohol activities.</p>
+<div class = "text" id = "indecency-word">Public Indecency:</div>
+  <div class = "text" id = "indecency-definition">The deliberate exposure in public or in view of the general public by a person of a portion or portions of their body in circumstances where the exposure is contrary to local moral or other standards of appropriate behavior.</div>
 
-<h3 class="definition">Public Indecency</h3>
-<p>Public Indecency: The deliberate exposure in public or in view of the general public by a person of a portion or portions of their body in circumstances where the exposure is contrary to local moral or other standards of appropriate behavior. </p>
+<div class = "text" id = "unsanitary-word">Unsanitary:</div>
+  <div class = "text" id = "unsanitary-definition">Anything that can potentially pose a risk to the public's health.</div>
 
-<h3 class="definition">Unsanitary</h3>
-<p>Unsanitary: Anything that can potentially pose a risk to the public's health.</p>
+<div class = "text" id = "litter-word">Litter/Trash:</div>
+  <div class = "text" id = "litter-definition">If you see trash, such as paper, cans, and bottles or  anything that is harmful to Earth’s environment, that is left lying in an open or public places.</div>
 
-<h3 class="definition">Litter & Trash</h3>
-<p>Litter & Trash: If you see trash, such as paper, cans, and bottles or  anything that is harmful to Earth’s environment, that is left lying in an open or public places. </p>
+<div class = "text" id = "biohazard-word">Biohazards:</div>
+  <div class = "text" id = "biohazard-definition">Hazard to humans or the environment resulting from biological agents or conditions such as, but not limited to, exposure to bodily fluids and toxins or unsafe levels of chemicals in water or soil.</div>
 
-<h3 class="definition">Biohazards</h3>
-<p>Biohazards: Hazard to humans or the environment resulting from biological agents or conditions such as, but not limited to, exposure to bodily fluids and toxins or unsafe levels of chemicals in water or soil.</p>
+<div class = "text" id = "outbreak-word">Outbreak:</div>
+  <div class = "text" id = "outbreak-definition">Incidents such as diseases, or infestations.</div>
 
-<h3 class="definition">Outbreak</h3>
-<p>Outbreak:Incidents such as diseases, or infestations.</p>
+<div class = "text" id = "pollution-word">Pollution:</div>
+  <div class = "text" id = "pollution-definition">The presence in or introduction into the environment of a substance or thing that has harmful or poisonous effects.</div>
 
-<h3 class="definition">Pollution</h3>
-<p>Pollution: The presence in or introduction into the environment of a substance or thing that has harmful or poisonous effects.</p>
+<div class = "text" id = "environmental-word">Environmental Safety:</div>
+  <div class = "text" id = "environmental-definition">Anything that can potentially pose a risk to the health of the environment.</div>
 
-<h3 class="definition">Environmental Safety</h3>
-<p>Environmental Safety: Anything that can potentially pose a risk to the health of the environment.</p>
+<div class = "text" id = "technical-word">Technical Connectivity:</div>
+  <div class = "text" id = "technical-definition">Refers to a community’s collection of hardware, software, networks, data centers, facilities and related equipment used to develop, test, operate, monitor, manage and/or support information technology services such as traffic systems, surveillance, and network lines.</div>
 
-<h3 class="definition">Technical Connectivity</h3>
-<p>Technical Connectivity: Refers to a community’s collection of hardware, software, networks, data centers, facilities and related equipment used to develop, test, operate, monitor, manage and/or support information technology services such as traffic systems, surveillance, and network lines.</p>
+<div class = "text" id = "structural-word">Structural Integrity:</div>
+  <div class = "text" id = "structural-definition">Structural integrity and failure is an aspect of engineering which deals with the ability of a structure to support a designed structural load without breaking.</div>
 
-<h3 class="definition">Structural Integrity</h3>
-<p>Structural Integrity: Structural integrity and failure is an aspect of engineering which deals with the ability of a structure to support a designed structural load without breaking.</p>
+<div class = "text" id = "transportation-word">Transportation:</div>
+  <dic class = "text" id = "transportation-definition">Transportation safety refers to the methods and measures used to prevent road and route users from being killed or seriously injured.</div>
 
-<h3 class="definition">Transportation</h3>
-<p>Transportation Safety: Transportation safety refers to the methods and measures used to prevent road and route users from being killed or seriously injured.</p>
+<div class = "text" id = "accessibility-word">Accessibility:</div>
+  <div class = "text" id = "accessibility-definition">Anything that is not accessible to people with physical disabilities.</div>
 
-<h3 class="definition">Accessibility</h3>
-<p>Accessibility: Anything that is not accessible to people with physical disabilities. </p>
+</section>
+<!-- BACKGROUND BEHIND BUTTON -->
+<div class = "color-behind-button">
 
-<button onclick="window.location.href = '/';">Back to Main</button>
+<!-- BACK TO HOME PAGE BUTTON -->
+<button class = "text" id = "backtohomebutton" onclick="window.location.href = '/';">Back to Home Page</button>
+</div>
 
   </body>
 </html>

@@ -136,6 +136,7 @@ body {
   display: flex;
   justify-content: space-between;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 #tags_first_row
@@ -162,6 +163,7 @@ body {
   min-height: 70px;
   min-width: 60px;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .toggle_checkbox_holder:hover{

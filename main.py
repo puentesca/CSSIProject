@@ -113,7 +113,7 @@ class FormPage(webapp2.RequestHandler):
 
     def get_tags(self):
         tags = []
-        tag_names = ["tag_vandalism","tag_drug","tag_loitering","tag_underage_substance_use", "tag_public_indecency", "tag_unsanitary", "tag_litter", "tag_biohazards", "tag_outbreak", "tag_pollution", "tag_environmental_safety", "tag_technical_connectivity", "tag_structural_integrity", "tag_transportation_infrastructure", "tag_accessibility", "tag_misc_maintenance"]
+        tag_names = ["tag_vandalism","tag_drug","tag_loitering","tag_underage_substance_use", "tag_public_indecency", "tag_unsanitary", "tag_litter", "tag_biohazards", "tag_landscaping_issue", "tag_pollution", "tag_environmental_safety", "tag_technical_connectivity", "tag_structural_integrity", "tag_transportation_infrastructure", "tag_accessibility", "tag_misc_maintenance"]
         tag_string_conversions= {
             "tag_vandalism": "Vandalism",
             "tag_drug": "Illegal Drug Use",
@@ -123,7 +123,7 @@ class FormPage(webapp2.RequestHandler):
             "tag_unsanitary": "Unsanitary",
             "tag_litter": "Excessive Litter",
             "tag_biohazards": "Excessive Bodily Fluids",
-            "tag_outbreak": "Landscaping Issue",
+            "tag_landscaping_issue": "Landscaping Issue",
             "tag_pollution": "Pollution",
             "tag_environmental_safety": "Environmental Safety",
             "tag_technical_connectivity": "Technical Connectivity",

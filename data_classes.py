@@ -63,7 +63,7 @@ class SubmissionHandler(object):
         forwardPassword = "CFCREPORT"
         recipientsEmail = "puentesc121@gmail.com" #submissionRecord.email
         print("Would be email: " + submissionRecord.email)
-        subject = "Submission by: " + submissionRecord.name
+        subject = "Submission by: " + submissionRecord.name + " with " + submissionRecord.urgency + " urgency."
         text = submissionRecord.__str__()
         smtp_server = smtplib.SMTP(smtpServer, smtpPort)
         smtp_server.ehlo()

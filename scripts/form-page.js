@@ -9,26 +9,14 @@ function init() {
 
   //Row 1
   SetTagButtonToggle(".toggle_checkbox_holder_tag_vandalism", "#tag_vandalism");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_drug","#tag_drug");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_loitering", "#tag_loitering");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_underage_substance_use", "#tag_underage_substance_use");
-
-  //Row 2
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_public_indecency", "#tag_public_indecency");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_unsanitary","#tag_unsanitary");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_litter", "#tag_litter");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_biohazards", "#tag_biohazards");
-
-  //Row 3
   SetTagButtonToggle(".toggle_checkbox_holder_tag_landscaping_issue", "#tag_landscaping_issue");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_pollution", "#tag_pollution");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_environmental_safety","#tag_environmental_safety");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_technical_connectivity", "#tag_technical_connectivity");
 
-  //Row 4
+  //Row 2
+  SetTagButtonToggle(".toggle_checkbox_holder_tag_pollution", "#tag_pollution");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_structural_integrity", "#tag_structural_integrity");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_transportation_infrastructure", "#tag_transportation_infrastructure");
-  SetTagButtonToggle(".toggle_checkbox_holder_tag_accessibility","#tag_accessibility");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_misc_maintenance", "#tag_misc_maintenance");
   //GetLocation();
 }

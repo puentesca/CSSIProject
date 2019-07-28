@@ -99,6 +99,7 @@ body{
   background-color: #4d83db;
   border-radius: 7.5px;
   text-align: center;
+  cursor: pointer;
 }
 
 #moveButton{

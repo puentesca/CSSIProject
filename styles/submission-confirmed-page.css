@@ -38,6 +38,7 @@ body{
   border: 2px #4d83db;
   background-color: #4d83db;
   border-radius: 7.5px;
+  cursor: pointer;
 }
 
 #button_holder

@@ -69,6 +69,7 @@ body{
   margin-left: 100px;
   margin-top: 100px;
   margin-bottom: 100px;
+  cursor: pointer;
 }
 
 #infoButtonsholder{
@@ -98,6 +99,7 @@ body{
   margin-left: 100px;
   margin-top: 100px;
   margin-bottom: 100px;
+  cursor: pointer;
 }
 
 /* REPORT BUTTON */
@@ -113,6 +115,7 @@ body{
   min-width: 500px;
   font-size: 40px;
   border-radius: 7.5px;
+  cursor: pointer;
 }
 
 /* Whitespace at the bottom */

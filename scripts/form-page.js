@@ -24,8 +24,36 @@ function init() {
 
 
 
+  api_key = "AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo";
+    url = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + api_key;
+    fetch(url, {method: 'POST'}).then(function (result){
+      result= result.json();
+      let lat;
+      let lng;
+      result = Promise.resolve(result);
+      result.then(function(value){
+        lat = value['location']['lat'];
+        lng = value['location']['lng'];
+        console.log(lng);
+        console.log(lat);
 
-  
+        geocode_url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo"
+        console.log(lat + ', ' + lng);
+        fetch(geocode_url).then(function (results) {
+          results = results.json()
+
+
+          results = Promise.resolve(results);
+          results.then(function(value){
+            $('#loc_suggest').text(value['results'][0]['formatted_address']);
+
+            $('#map').append('<iframe id="iframe_map" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo&q=' + value['results'][0]['formatted_address'] + '" allowfullscreen></iframe>');
+          })
+        })
+      })
+    });
+
+
 }
 
 function SetUrgencyButtonToggle(div_name, checkbox_name)

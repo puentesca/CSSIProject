@@ -222,6 +222,28 @@ body {
   padding-bottom: 10px;
 }
 
+#loc
+{
+  background-color: #fafcff;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+}
+
+#location_suggestions_text_holder
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+}
+
 /* Buttons */
 
 #submit_button{

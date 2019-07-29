@@ -19,6 +19,13 @@ function init() {
   SetTagButtonToggle(".toggle_checkbox_holder_tag_transportation_infrastructure", "#tag_transportation_infrastructure");
   SetTagButtonToggle(".toggle_checkbox_holder_tag_misc_maintenance", "#tag_misc_maintenance");
   //GetLocation();
+
+  $('#loc_enter').click(onButtonClick);
+
+
+
+
+  
 }
 
 function SetUrgencyButtonToggle(div_name, checkbox_name)
@@ -52,17 +59,13 @@ function SetTagButtonToggle(div_name, checkbox_name)
   });
 }
 
-// function GetLocation()
-// {
-//   console.log("Called!");
-//   var startPos;
-//   var geoSuccess = function(position) {
-//     startPos = position; document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-//     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-//
-//
-//   };
-//   console.log(navigator.geolocation.getCurrentPosition(geoSuccess));
-// }
+function onButtonClick()
+{
+  loc = $('#address_textbox').val();
+
+  $('#iframe_map').remove();
+
+  $('#map').append('<iframe id = "iframe_map" width = "600" height = "450" frameborder = "0" style="border:0" src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAxRqWmRH0WoaqkSYbLOMIg3roBnPJTqFo&q='+ loc + '" allowfullscreen></iframe>');
+}
 
 $(document).ready(init);

@@ -78,7 +78,6 @@ class FormPage(webapp2.RequestHandler):
         report_image_url = self.request.get("image-url")
         report_description = self.request.get("description")
         report_location = self.request.get("location")
-        report_location = self.request.get("location suggestions")
         report_tags = self.get_tags()
         report_urgency = self.get_urgency()
         #Creates a local record that is printable
